@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Comentarios {% endblock %}
+{% block head %}
+{{super()}}
+
+{% endblock %}
+{% block body %}
+
+<div  class="caja__trasera_mascotas">
+    
+    <h1 id="titu2">Formulario de comentarios</h1>
+    <form method="post" action="/comentarios">
+        <label id="letrawhite" for="comentario">Escribe tu comentario:</label><br>
+        <textarea id="comentario" name="comentario"></textarea><br>
+        <button type="submit">Enviar comentario</button>
+    </form>
+
+
+</div>
+
+
+{% endblock %}
+
+{% block footer %}
+
+{% endblock %}

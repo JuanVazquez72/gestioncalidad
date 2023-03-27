@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %} Rentas {% endblock %}
+{% block head %}
+{{super()}}
+{% endblock %}
+{% block body %}
+
+
+<div class="contenedor__animal">
+    
+    <div  class="caja__trasera_reganimal"> 
+
+         
+
+       
+
+            <form action="" method="POST">
+                <h1 id="titu"> Rentar bicicletas </h1>
+                <div id="registro">
+                    <h2 id="color"> Bicicletas disponibles:  </h2>
+                    <select name="bicicleta" id="bicicleta">
+                        <option value="None" selected="selected" hidden="hidden">Elige el tipo de bicicleta</option>
+                        {% for usuario,diccionario in dicc_bicicletas.items() %}
+                     
+                        <option value="{{diccionario['tipo_bicicleta']}}"> {{diccionario['tipo_bicicleta']}}</option>
+                        
+                   
+                        {% endfor %}
+                    </select>
+                    
+                </div>
+                <div id="registro">
+                    <h2 id="color"> Fecha de renta:</h2>
+                    <input type="date" name="fecha" id = "fecha"
+                    value={{hoy}}
+                    min={{hoy}} max="2023-12-31">
+                </div>
+                        
+                <input id="registro" type="submit" name="enviar" value="Rentar">
+        </form>   
+        
+    </div>
+</div>
+
+        
+{% endblock %}
+{% block footer %}
+
+{% endblock %}

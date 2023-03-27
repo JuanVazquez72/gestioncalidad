@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+{% block title %}Bicicletas{% endblock %}
+{% block head %}
+<style>
+
+    
+</style>
+{{super()}}
+
+{% endblock %}
+{% block body %}
+
+{% if confi == true %}
+  <div class="alert alert-primary">
+    Cita creada correctamente
+  </div>        
+{% endif %}
+
+{% if comentario_confirmacion == true %}
+  <div class="alert alert-primary">
+    Comentario enviado correctamente
+  </div>        
+{% endif %}
+
+
+
+
+{% if first == true %}
+  <div class="alert alert-primary">
+    Logeado exitosamente 
+  </div>        
+{% endif %}
+
+
+{% if deslogeado == true %}
+  <div class="alert alert-primary">
+    Deslogeado exitosamente 
+  </div>        
+{% endif %}
+
+
+
+
+
+
+{%  if session['logged_in'] == True  %}
+ 
+     
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="/static/img/1.jpg" width="30%" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="/static/img/2.jpg" width="30%" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="/static/img/3.jpg" width="30%" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="/static/img/4.jpg" width="30%" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="/static/img/5.jpg" width="30%" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+  <div id="Botones">
+  
+    <button type="button" class="btn btn-secondary btn-lg"> <a href="/lista_bicicletas/" id="abtn">  Lista bicicletas </a> </button>
+    <button type="button" class="btn btn-primary btn-lg"><a href="/citas/" id="abtn">  Rentar bicicletas </a></button>
+    <button type="button" class="btn btn-secondary btn-lg"><a href="/lista_citas/" id="abtn">  Lista de rentas </a></button>
+  
+  </div>
+
+{% else %}
+    <div class="contenedor__todo">
+        <div class="caja__trasera">
+            <div class="caja__trasera-login">
+                <h3 id="inicio_regis"> ¿Ya tienes una cuenta?</h3>
+                <p>Inicia sesión para entrar en la página</p>
+                
+                <button id="btn__iniciar-sesion"><a href="/login">Iniciar sesión</a></button>
+            </div>
+            <div class="caja__trasera-register">
+                <h3 id="inicio_regis">¿Aún no tienes una cuenta?</h3>
+                <p>Regístrate para que puedas iniciar sesión</p>
+                <button id="btn__registrarse"> <a href="/register">Regístrarse</a></button>
+            </div>
+        </div>   
+    </div>
+{% endif %}
+
+
+
+
+
+
+{% endblock %}
+{% block footer %}
+
+{% endblock %}

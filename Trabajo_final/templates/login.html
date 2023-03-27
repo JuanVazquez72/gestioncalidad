@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Iniciar sesión{% endblock %}
+{% block head %}
+{{super()}}
+
+{% endblock %}
+{% block body %}
+
+<div class="contenedor__animal">
+    
+    <div  class="caja__trasera_login">     
+        
+        <form action="" method="POST">
+                <h2 id="iniciartitulo">Iniciar sesión</h2>
+                <div id="registro">
+                <label for="usuario" id="letra">Usuario:</label>
+                <input type="text" id="usuario" name="usuario" >
+                </div >
+                <div id="registro">
+                <label for="password" id="letra">Contraseña:</label>
+                <input type="password" id="password" name="password">
+                </div>
+        
+        
+            <input id="registro" type="submit" name="enviar" value="Entrar">
+        </form> 
+  
+    </div>
+  
+</div>
+
+
+        
+{% endblock %}
+{% block footer %}
+
+{% endblock %}

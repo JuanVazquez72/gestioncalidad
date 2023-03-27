@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}Renta de bicicletas {% endblock %}
+{% block head %}
+{{super()}}
+
+{% endblock %}
+{% block body %}
+
+
+
+<div class="contenedor__animal">
+    
+    <div  class="caja__trasera_mascotas"> 
+        <h2 id="titu"> Rentas de {{session['usuario']}}</h2>  
+
+        <div>
+            <table>
+                <tr>
+ 
+                    <th scope="col"> Bicicleta </th>
+                    <th scope="col"> Fecha</th>
+                  
+                </tr>
+                {% for id,diccionario in dicc_citas.items() %} 
+                    {% if session['usuario'] == diccionario['usuario']  %}
+                 <tr>
+              
+                  <th>{{diccionario['tipo_bicicleta']}} </th>
+              
+                  <th> {{diccionario['fecha']}} </th>               
+              
+                </tr>
+                {% endif %}  
+              
+                {% endfor %}
+              </table>
+           
+        </div>
+
+       
+
+
+
+
+    </div>
+</div>
+
+
+        
+{% endblock %}
+
+{% block footer %}
+
+{% endblock %}

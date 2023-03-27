@@ -1,0 +1,10 @@
+Usuarios y contraseñas 
+
+Usuario: Cliente
+Password: Cliente123
+
+Usuario: Trabajador
+Password: Trabajador123
+
+Usuario: Admin
+Password: Root
